@@ -1,0 +1,61 @@
+﻿@model Student
+
+<style>
+	/* Estilos para el formulario de inicio de sesión */
+
+	.login-form {
+		max-width: 400px;
+		margin: 50px auto;
+		padding: 20px;
+		background-color: #f9f9f9;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+		.login-form label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		.login-form input[type="text"],
+		.login-form input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.login-form button {
+			width: 100%;
+			padding: 10px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+			.login-form button:hover {
+				background-color: #0056b3;
+			}
+
+            }
+
+
+</style>
+
+<form class="login-form" asp-action="Login" asp-controller="Student">
+	<label asp-for="StudentCode">
+		Codigo de Estudiante
+		<input type="text" placeholder="Codigo de Estudiante" />
+	</label>
+	<label asp-for="Password">
+		Contraseña
+		<input type="text" placeholder="Contraseña" />
+	</label>
+	<button type="submit" >Aceptar</button>
+</form>
+
